@@ -1,0 +1,228 @@
+/* CSS file dedicated for Desktop version of pages */
+
+/*RECURRING HEADER CONTENT*/
+
+/* outlines a 3 column grid for the pages
+- also defines where the content belongs (in rows) */
+body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "nav nav nav"
+        "main main main"
+        "footer footer footer"
+    ;
+}
+
+/* prevents an anchor tag from being displayed */
+body>a{
+    display: none;
+}
+
+/* defines position of nav element based on body grid areas */
+nav {
+    grid-area: nav;
+}
+
+/* removes list styling and changes colour / position of list */
+nav>ul {
+    background-color: #242424;
+    padding-left: 0px;
+    margin: 0px 0px;
+}
+
+/* changes position of list objects */
+nav>ul>li {
+    display: inline-block;
+    margin-left: 5%;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* selects first object in list (this is the name in the top left corner on the page), and changes its positioning */
+nav>ul>li:nth-child(1) {
+    padding-right: 8%;
+}
+
+/* on hover event, add an underline effect to list items */
+nav>ul>li>a:hover {
+    text-decoration: underline rgb(0, 255, 136) 4px;
+}
+
+/* defines position of main element based on body grid areas */
+main {
+    grid-area: main;
+}
+
+/* defines position of footer element based on body grid areas */
+footer {
+    grid-area: footer;
+    background-color: #242424;
+    text-align: center;
+}
+
+/* changes footer text style */
+.footer-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+
+/*-----------------------------------------------------INDEX PAGE STYLING-----------------------------------------------------*/
+
+/* defines a container for content */
+.container {
+    display: flex;
+    align-items: center;
+    margin: 8% 8%;
+}
+
+/* outlines specific space for the image */
+.image-space {
+    order: 1;
+}
+
+/* appoints properties to the image */
+.image-space>img {
+    max-width: 80%;
+    transition: 0.5s ease-in; 
+}
+
+/* on hover, change border radius and colour of image border */
+.image-space>img:hover{
+    border-top-right-radius: 100px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 0px;
+    border-color: rgba(0, 0, 0, 0.5);
+}
+
+/* outlines another space within container for text */
+.content-space {
+    order: 2;
+    width: 50%;
+    text-align: center;
+    box-shadow: 40px 40px 10px rgb(80, 80, 80);
+}
+
+
+/*-----------------------------------------------------PORTFOLIO PAGE STYLING-----------------------------------------------------*/
+
+/* deines introduction paragraph container */
+.introduction {
+    width: 70%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+/* specifies a grid */
+.portfolio-grid {
+    grid-template-columns: auto auto;
+    row-gap: 5%;
+    margin-top: 10vh;
+}
+
+/* adds properties to <p> tag within grid */
+.portfolio-grid>p {
+    margin-left: 6%;
+    border-radius: 100px;
+}
+
+/* adds properties to <img> tag within grid */
+.portfolio-grid>img {
+    height: 100%;
+    width: 100%;
+}
+
+
+/*-----------------------------------------------------CONTACT PAGE STYLING-----------------------------------------------------*/
+
+/* styling for checkbox */
+input[type="checkbox"] {
+    width: 2vh;
+    height: 2vh;
+}
+
+/* styling for radio box */
+input[type="radio"] {
+    width: 2vh;
+    height: 2vh;
+}
+
+/* font size for text input */
+input[type="text"] {
+    font-size: 16px;
+}
+
+/* sizing for inputbox */
+input[type="submit"] {
+    width: 10vh;
+    height: fit-content;
+}
+
+/* font size for current option in drop down */
+select {
+    font-size: 16px;
+}
+
+/* font size for options in drop down */
+select>option {
+    font-size: 16px;
+}
+
+/* text area font size */
+textarea {
+    font-size: 16px;
+}
+
+/* on hover, change social image sizes */
+.socials:hover {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
+
+
+/*-----------------------------------------------------WORK EXPERIENCE PAGE STYLING-----------------------------------------------------*/
+
+
+/* defines a flex container */
+.WE-container {
+    display: flex;
+    gap: 4%;
+}
+
+/* font size for <p> tag */
+.WorkExp>p {
+    font-size: 16px;
+}
+
+/* font size for <ul> tag */
+.WorkExp>ul {
+    font-size: 16px;
+}
+
+
+/*-----------------------------------------------------SITE REPORT PAGE STYLING -----------------------------------------------------*/
+
+
+/* styles a container for site report */
+.Main-container {
+    height: fit-content;
+    margin: 3% 8%;
+    padding: 2% 3%;
+    row-gap: 75px;
+
+}
+
+/* font size within div */
+.Main-container>div {
+    font-size: 16px;
+}
+
+/* image size within div */
+.Main-container>div>img {
+    width: 50%;
+}

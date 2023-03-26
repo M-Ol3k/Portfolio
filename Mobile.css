@@ -1,0 +1,296 @@
+/* CSS file dedicated for Mobile version of pages */
+
+/*RECURRING HEADER CONTENT*/
+
+/* navigation folding 'icon' */
+.showNav {
+    float: right;
+    height: 0.8em;
+    width: 1.25em;
+    display: block;
+    border-top: 0.2em solid #e6e6e6;
+    border-bottom: 0.2em solid #e6e6e6;
+    margin: 5%;
+    padding: 10px;
+}
+
+/* further styling for nav 'icon' */
+.showNav::before {
+    content: '';
+    position: absolute;
+    width: 1.25em;
+    margin-top: 0.3em;
+    border-top: 0.2em solid #e6e6e6;
+}
+
+/* anchor tag positioning */
+body>a {
+    margin-top: 0;
+    margin-right: 0;
+}
+
+/* navigaion layout */
+nav {
+    background-color: #242424f1;
+    color: white;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+/* <ul> tag positioned */
+nav>ul {
+    text-align: center;
+    margin: 1% 10%;
+    padding-right: 11%;
+}
+
+/* <li> items positioned */
+nav>ul>li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* 1st child selected for positioning */
+nav>ul>li:nth-child(1) {
+    padding-top: 0;
+}
+
+/* styling added on active anchor */
+nav>ul>li>a:active {
+    background-color: white;
+    color: #000;
+    padding: 2% 15%;
+}
+
+/* styling for .on class */
+#clicked .on {
+    display: block;
+}
+
+/* styling for .off class */
+#clicked .off {
+    display: block;
+}
+
+/* when target clicked, on button is removed */
+#clicked:target .on {
+    display: block;
+}
+
+/* when target clicked off button appears */
+#clicked:target .off {
+    display: block;
+}
+
+/* if statement for when nav is targeted */
+#clicked:target nav {
+    display: none;
+}
+
+/* changes border color for element */
+#clicked:target .showNav {
+    border-color: #242424;
+}
+
+/* adds styling to 'before' element */
+#clicked:target .showNav::before {
+    border-color: #242424;
+}
+
+/* 'removes' footer from view on mobile */
+footer {
+    display: none;
+}
+
+/*-----------------------------------------------------INDEX PAGE STYLING-----------------------------------------------------*/
+
+/* grid for index page outlined */
+.container {
+    display: grid;
+    row-gap: 10%;
+    width: 90%;
+    padding-top: 2%;
+    margin: auto;
+}
+
+/* image width specified */
+.image-space>img {
+    max-width: 90%;
+}
+
+/* grid for content specified */
+.content-space {
+    width: 90%;
+    text-align: center;
+    box-shadow: 30px 30px 10px rgb(80, 80, 80);
+}
+
+/*-----------------------------------------------------PORTFOLIO PAGE STYLING-----------------------------------------------------*/
+
+
+/* grid for mobile page set */
+.portfolio-mobile {
+    display: grid;
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+    padding-bottom: 15vh;
+}
+
+/* width of container set */
+.introduction {
+    width: 85%;
+}
+
+/* gap between rows specified */
+.portfolio-grid {
+    row-gap: 2%;
+    margin-top: 5vh;
+}
+
+/* border customisation */
+.portfolio-grid>p {
+    border-radius: 25px;
+}
+
+/* image size within grid */
+.portfolio-grid>img {
+    width: 90%;
+    height: auto;
+}
+
+
+/*-----------------------------------------------------CONTACT PAGE STYLING-----------------------------------------------------*/
+
+
+/* grid for mobile page outlined */
+.form-mobile {
+    display: grid;
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+}
+
+/* checkbox sizing */
+input[type="checkbox"] {
+    width: 3vh;
+    height: 3vh;
+}
+
+/* radio button sizing */
+input[type="radio"] {
+    width: 3vh;
+    height: 3vh;
+}
+
+/* input box font set */
+input[type="text"] {
+    font-size: 18px;
+}
+
+/* input box size styled */
+input[type="submit"] {
+    margin-top: 15px;
+    width: 12vh;
+    height: 4.5vh;
+}
+
+/* drop down font size */
+select {
+    font-size: 18px;
+}
+
+/* font size for options in drop down */
+select>option {
+    font-size: 18px;
+}
+
+/* text area font size */
+textarea {
+    font-size: 18px;
+
+}
+
+/* hover effect added to social icons */
+.socials:hover {
+    width: 90px;
+    height: 90px;
+    margin: 5px;
+}
+
+/* animation, divided into 4 parts */
+@keyframes myAnim {
+    25%{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    75% {
+        transform: scale(1)
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* class for animated image */
+.blob {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-image: url(blob.svg);
+    background-repeat: no-repeat;
+    animation: myAnim 8s infinite;
+}
+
+
+/*-----------------------------------------------------WORK EXPERIENCE PAGE STYLING-----------------------------------------------------*/
+
+
+/* <p> tag font changed */
+.WorkExp>p {
+    font-size: 18px;
+}
+
+/* font size for unordered list  */
+.WorkExp>ul {
+    font-size: 18px;
+}
+
+/* margin for container added */
+.WE-content1 {
+    margin-bottom: 10%;
+}
+
+/* margin for container added */
+.WE-content2 {
+    margin-bottom: 10%;
+}
+
+/* margin for container added */
+.WE-content3 {
+    margin-bottom: 10%;
+}
+
+
+/*-----------------------------------------------------SITE REPORT PAGE STYLING -----------------------------------------------------*/
+
+/* styles a container for site report */
+.Main-container {
+    width: 100%;
+    row-gap: 1%;
+    margin: auto;
+    margin-bottom: 27vh;
+}
+
+/* font size within div */
+.Main-container>div {
+    margin: 0% 8%;
+    font-size: 18px;
+}
+
+/* image size within div */
+.Main-container>div>img {
+    width: 100%;
+}

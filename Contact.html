@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- mobile and desktop css links linked -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Main.css" media="screen">
+    <link rel="stylesheet" href="Mobile.css" media="screen and (max-width: 800px)">
+    <link rel="stylesheet" href="Desktop.css" media="screen and (min-width: 800px)">
+    <title>Contact</title>
+</head>
+
+<!-- body of the page begins -->
+
+<body id="clicked">
+
+    <!-- Navigation bar-->
+
+    <a href="#" class="off showNav"></a>
+    <nav>
+        <a href="#clicked" class="on showNav"></a>
+        <ul>
+            <li>
+                <h1 class="name">Michal <span style="color:rgb(183, 0, 255)">O</span>lek</h1>
+            </li>
+            <li> <a href="Index.html"> Index </a> </li>
+            <li> <a href="Portfolio.html"> Portfolio </a> </li>
+            <li> <a href="Contact.html"> Contact </a> </li>
+            <li> <a href="WorkExperience.html"> Work Experience </a> </li>
+            <li> <a href="SiteReport.html"> Site report </a> </li>
+        </ul>
+        <div class="blob"></div>
+    </nav>
+
+    <!-- Main content -->
+
+    <main>
+        <div class="form-mobile">
+        <form action="mailto:Placeholder@email.com" method="get">
+            <h2>Contact</h2>
+
+            <div class="radio-select">
+                <input type="radio" id="radiobutton1" name="radio" value="radio-btn-1">
+                <label for="radiobutton1">Company</label>
+
+                <input type="radio" id="radiobutton2" name="radio" value="radio-btn-2">
+                <label for="radiobutton2">Personal</label>
+            </div>
+
+            <label for="namebox1">Name</label>
+            <input type="text" id="namebox1" name="nameBox" placeholder="Type here...">
+
+            <label for="SubjectBox1">Subject</label>
+            <select id="SubjectBox1" name="subjectBox">
+                <option value="1" selected disabled>Select a subject</option>
+                <option value="2">Work experience</option>
+                <option value="3">Availability</option>
+                <option value="4">Miscellaneous</option>
+            </select>
+
+            <label for="body">Message</label>
+            <textarea name="body" id="body" placeholder="Write your message here..." cols="10" rows="5"></textarea>
+
+            <div class="robot-check">
+                <input type="checkbox" id="checkbox1" name="checkbox1">
+                <label for="checkbox1">I'm not a robot</label>
+            </div>
+
+            <input type="submit" value="Send">
+
+            <div class="socials-container">
+                <a href="https://www.instagram.com/" class="socials"><img src="Instagram-icon.svg" alt="Instagram icon"></a>
+                <a href="https://www.reddit.com/" class="socials"><img src="Reddit-icon.svg" alt="Reddit icon"></a>
+                <a href="https://www.linkedin.com/" class="socials"><img src="Linkedin-icon.svg" alt="Linkedin icon"></a>
+            </div>
+        </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+
+    <footer>
+        <p class="footer-text">&COPY; Michal Olek - 2023</p>
+    </footer>
+
+</body>
+</html>
